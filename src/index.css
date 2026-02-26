@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
@@ -95,6 +97,17 @@
       @apply border-border;
     }
     body {
-      @apply bg-background text-foreground;
+      @apply bg-deep-navy text-white font-body;
+      overflow-x: hidden;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Custom Gradient Utilities */
+  @layer utilities {
+    .bg-gradient-radial {
+      background: radial-gradient(circle at center, var(--tw-gradient-stops));
     }
   }

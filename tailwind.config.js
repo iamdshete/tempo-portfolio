@@ -17,7 +17,18 @@ module.exports = {
   		}
   	},
   	extend: {
+  		fontFamily: {
+  			'display': ['Outfit', 'sans-serif'],
+  			'heading': ['Inter', 'sans-serif'],
+  			'body': ['DM Sans', 'sans-serif'],
+  		},
   		colors: {
+  			'neon-cyan': '#00d4ff',
+  			'neon-magenta': '#ff006e',
+  			'neon-violet': '#b537f2',
+  			'deep-navy': '#0a0e27',
+  			'deep-purple': '#2d1b69',
+  			'dark-navy': '#0d1117',
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
@@ -68,6 +79,22 @@ module.exports = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		keyframes: {
+  			'float': {
+  				'0%, 100%': { transform: 'translateY(0)' },
+  				'50%': { transform: 'translateY(-20px)' },
+  			},
+  			'pulse-glow': {
+  				'0%, 100%': { opacity: '1' },
+  				'50%': { opacity: '0.6' },
+  			},
+  			'slide-up': {
+  				'0%': { transform: 'translateY(20px)', opacity: '0' },
+  				'100%': { transform: 'translateY(0)', opacity: '1' },
+  			},
+  			'fade-in': {
+  				'0%': { opacity: '0' },
+  				'100%': { opacity: '1' },
+  			},
   			'accordion-down': {
   				from: {
   					height: '0'
@@ -86,6 +113,10 @@ module.exports = {
   			}
   		},
   		animation: {
+  			'float': 'float 6s ease-in-out infinite',
+  			'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+  			'slide-up': 'slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+  			'fade-in': 'fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
